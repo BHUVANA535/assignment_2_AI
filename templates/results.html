@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Reviewers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Top Recommended Reviewers</h1>
+    <ol>
+        {% for author, score in results %}
+        <li>{{ author }} — Score: {{ "%.4f"|format(score) }}</li>
+        {% endfor %}
+    </ol>
+    <a href="/">← Upload another paper</a>
+</body>
+</html>

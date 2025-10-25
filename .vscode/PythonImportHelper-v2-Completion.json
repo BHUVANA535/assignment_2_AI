@@ -1,0 +1,128 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "PyPDF2,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PyPDF2.",
+        "description": "PyPDF2.",
+        "detail": "PyPDF2.",
+        "documentation": {}
+    },
+    {
+        "label": "TfidfVectorizer",
+        "importPath": "sklearn.feature_extraction.text",
+        "description": "sklearn.feature_extraction.text",
+        "isExtraImport": true,
+        "detail": "sklearn.feature_extraction.text",
+        "documentation": {}
+    },
+    {
+        "label": "CountVectorizer",
+        "importPath": "sklearn.feature_extraction.text",
+        "description": "sklearn.feature_extraction.text",
+        "isExtraImport": true,
+        "detail": "sklearn.feature_extraction.text",
+        "documentation": {}
+    },
+    {
+        "label": "cosine_similarity",
+        "importPath": "sklearn.metrics.pairwise",
+        "description": "sklearn.metrics.pairwise",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics.pairwise",
+        "documentation": {}
+    },
+    {
+        "label": "LatentDirichletAllocation",
+        "importPath": "sklearn.decomposition",
+        "description": "sklearn.decomposition",
+        "isExtraImport": true,
+        "detail": "sklearn.decomposition",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "SentenceTransformer",
+        "importPath": "sentence_transformers",
+        "description": "sentence_transformers",
+        "isExtraImport": true,
+        "detail": "sentence_transformers",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index():\n    return render_template('index.html')\n@app.route('/recommend', methods=['POST'])\ndef recommend():\n    uploaded_file = request.files['paper']\n    if not uploaded_file:\n        return \"No file uploaded.\"\n    # 1️⃣ Extract text from PDF\n    reader = PyPDF2.PdfReader(uploaded_file)\n    input_text = \"\".join([p.extract_text() or \"\" for p in reader.pages])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "recommend",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def recommend():\n    uploaded_file = request.files['paper']\n    if not uploaded_file:\n        return \"No file uploaded.\"\n    # 1️⃣ Extract text from PDF\n    reader = PyPDF2.PdfReader(uploaded_file)\n    input_text = \"\".join([p.extract_text() or \"\" for p in reader.pages])\n    # 2️⃣ Basic keyword extraction\n    words = re.findall(r'\\b\\w+\\b', input_text.lower())\n    input_keywords = [w for w, _ in zip(words, range(20))]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n# ---------------- Load pre-extracted data ----------------\nbase_dir = \"extracted_data\"\nwith open(os.path.join(base_dir, \"author_texts_pdfminer.json\"), 'r', encoding='utf-8') as f:\n    authors_texts = json.load(f)\nwith open(os.path.join(base_dir, \"authors_keywords.json\"), 'r', encoding='utf-8') as f:\n    authors_keywords = json.load(f)\nwith open(os.path.join(base_dir, \"references_dataset.json\"), 'r', encoding='utf-8') as f:\n    authors_references = json.load(f)\nbert_model = SentenceTransformer('all-MiniLM-L6-v2')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "base_dir = \"extracted_data\"\nwith open(os.path.join(base_dir, \"author_texts_pdfminer.json\"), 'r', encoding='utf-8') as f:\n    authors_texts = json.load(f)\nwith open(os.path.join(base_dir, \"authors_keywords.json\"), 'r', encoding='utf-8') as f:\n    authors_keywords = json.load(f)\nwith open(os.path.join(base_dir, \"references_dataset.json\"), 'r', encoding='utf-8') as f:\n    authors_references = json.load(f)\nbert_model = SentenceTransformer('all-MiniLM-L6-v2')\n@app.route('/')\ndef index():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "bert_model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "bert_model = SentenceTransformer('all-MiniLM-L6-v2')\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/recommend', methods=['POST'])\ndef recommend():\n    uploaded_file = request.files['paper']\n    if not uploaded_file:\n        return \"No file uploaded.\"\n    # 1️⃣ Extract text from PDF",
+        "detail": "app",
+        "documentation": {}
+    }
+]

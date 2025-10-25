@@ -1,0 +1,81 @@
+Authors found: ['Amit Saxena', 'Amita Jain', 'Animesh Chaturvedi', 'Ankita Jain', 'Arun Chauhan']
+
+Similarity scores:
+Amit Saxena: 0.1059
+Amita Jain: 0.0746
+Animesh Chaturvedi: 0.1139
+Ankita Jain: -0.0213
+Arun Chauhan: 0.1246
+Aruna Malapati: 0.3293
+Aruna Tiwari: 0.1272
+Barsha Mitra: 0.0493
+Bhanukiran Perabathini: 0.1427
+Bharghava Rajaram: 0.0841
+Deepak K T: 0.1685
+Devendra K Tayal: 0.0734
+Dilip Singh Sisodia: 0.1866
+dipanjan roy: -0.0404
+Dipti Mishra: -0.0152
+Dr. Ashish Jain: 0.0314
+Dr. Shikha Mehta: 0.1427
+Dr.Manpreet Kaur: 0.2248
+Dr.Rohit Beniwal: 0.1949
+Dr.Ruchi Mittal: 0.0837
+esha baidya kayal: 0.2186
+Geeta Rani: 0.1053
+Himanee Bansal: 0.0999
+Himanshu Mittal: -0.0063
+J. Balasubramaniam: 0.1524
+Jagdish Bansal: 0.1295
+Jayasri D: 0.0116
+Jian Wang: 0.0550
+K.V. Sambasivarao: -0.0378
+Kastuv Nag: 0.2157
+Khaldoon Dhou: 0.0383
+Krishna Asawa: 0.2033
+Mala Saraswat: 0.2007
+Manju_JaypeeTech: 0.0268
+Manoranjan Mohanty: -0.0088
+Minni Jain: 0.1446
+Mukesh Prasad: 0.1545
+Navneet Pratap Singh: 0.1374
+Nikhil Tripathi: 0.1353
+Nishchal K. Verma: 0.0972
+Om Prakash Patel: 0.0278
+OmPrakash Kaiwartya: -0.0235
+Pabitra Mitra: 0.1316
+Payal Khurana Batra: 0.0025
+Pinaki Chakraborty: 0.1312
+Prakash Chandra Sharma: 0.1404
+Prof. B Subudhi: -0.0589
+Rama Murthy Garimella: 0.0522
+Ramakrishan Maheshwari: -0.0072
+Ramalinga Swamy Cheruku: 0.0746
+ruchi sharma: 0.2281
+Rudresh dwivedi: 0.0615
+Sambit Bakshi: 0.1688
+Sanatan Sukhija: 0.1009
+Shikha Gupta: 0.1470
+Sowmini Devi: 0.1059
+Sreedhar Madichetty: -0.0476
+Srishti Sharma: 0.2109
+Sulabh Tyagi: 0.2111
+Sunny Rai: 0.0841
+sushma hans: 0.1430
+Tandra Pal: 0.0703
+Tingwen Huang: -0.0233
+Udit Satija: -0.0169
+V. Ravi: 0.1103
+Vaishali Soni: 0.1681
+Venkata Dilip Kumar: 0.1294
+Venkata Rajesh Kumar Tavva: 0.1748
+Vidhi Khanduja: 0.2088
+Yayati Gupta: 0.0903
+Yew-Soon Ong: 0.1523
+
+Top-k recommended reviewers:
+Aruna Malapati: 0.3293
+ruchi sharma: 0.2281
+Dr.Manpreet Kaur: 0.2248
+esha baidya kayal: 0.2186
+Kastuv Nag: 0.2157
